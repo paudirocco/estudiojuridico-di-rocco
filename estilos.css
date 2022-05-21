@@ -1,0 +1,625 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.contenedorGrid {
+    display: grid;
+    grid-template-areas: "header"
+                        " frase"
+                        " main"
+                        " footer";
+}
+.header{
+    grid-area: header;
+}
+.frase{
+    grid-area: frase;
+}
+.main{
+    grid-area: main;
+}
+.footer{
+    grid-area: footer;
+}
+
+/* HEADER */
+header {
+    height: 100px;
+    width: 100%;
+    background-color: hsla(52, 89%, 24%, 0.903);
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;         /* en realidad me gustaria cuando la resolucion es baja hacer un menu hamburguesa, pero por el momento lo dejo asi */
+    justify-content: space-between;
+    align-items: center;
+}
+.logo img{
+    width: 100px;
+    height: 90px;
+}
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+    color: hsla(52, 91%, 8%, 0.903);
+}
+.nav a {
+    text-decoration: none;
+    color: hsla(52, 82%, 70%, 0.8);
+}
+.nav a:hover {
+    color:hsla(52, 91%, 8%, 0.903)
+}
+.frase{
+    display: flex;
+}
+.frase1 {
+    height: 100px;
+    width: 100%;
+    background-image: url(imagenes/fondo1.jpg);
+    background-size: cover;
+}
+.frase p {
+    color: hsla(52, 90%, 16%, 0.903);
+    background-color: hsla(52, 58%, 85%, 0.792);
+    padding-left: 15px;
+    text-align: center;
+}
+
+/* INDEX */
+main {
+    width: auto;
+    height: 100%;
+}
+.conocenos {
+    margin: 30px;
+}
+.conocenos h2 {
+    color: hsla(52, 91%, 8%, 0.903);
+    margin: 15px;
+}
+.indexAdriana{
+    width: auto;
+    height: 300px;
+    margin-right: 15px;
+}
+.conocenos p {
+    color: hsla(52, 91%, 8%, 0.903);
+    text-align: justify;
+    margin: 15px;
+}
+.conocenos input, .botonServicios {
+    color: hsla(52, 90%, 16%, 0.903);
+    background: transparent;
+    border: 2px solid hsla(52, 90%, 16%, 0.903);
+    border-radius: 6px;
+    padding: 6px 2px;
+    display: inline;
+    cursor: pointer;
+    margin: 20px;
+}
+.conocenos input:hover, .botonServicios:hover {
+    background-color: hsla(52, 90%, 16%, 0.903);
+    color: hsla(52, 82%, 70%, 0.8);
+}
+.conocenos a {
+    text-decoration: none;
+}
+.servicios {
+    margin: 30px;
+    /* width: auto; */
+}
+.servicios h2{
+    text-align: left;
+}
+.imagenesServiciosIndex{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin-right: 15px;
+}
+.servicios div {
+    padding-left: 50px;
+    align-items: center;
+}
+.servicios h2 {
+    width: auto;
+}
+.linkServicios {
+    text-decoration: none;
+}
+.seccionBoton {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    width: 100%;
+    background-color: hsla(52, 89%, 24%, 0.903);
+    color:hsla(52, 82%, 70%, 0.8);
+    font-size: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 90px auto;
+}
+.seguinos {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+footer h3 {
+    margin: 6px;
+}
+footer i {
+    color: hsla(52, 82%, 70%, 0.8);
+    font-size: 16px;
+    letter-spacing: 5px;
+    margin-left: 6px;
+}
+.horariosAtencion {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.horariosAtencion ul li{
+    font-size: 9px;
+}
+.horariosAtencion ul{
+    list-style: none;
+    margin-left: 6px;
+}
+.contacto {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: right;
+}
+.contacto p {
+    font-size: 9px;
+    margin-right: 6px;
+}
+.copyright {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    text-align: center;
+    font-size: 7px;
+    margin-top: 10px;
+}
+.subir {
+    height: 40px;
+    width: 40px;
+    background-color: hsla(52, 91%, 8%, 0.903);
+    position: fixed;
+    bottom: 40px;
+    right: 15px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 25px;
+    border-radius: 50%;
+    border: 5px solid hsla(52, 82%, 70%, 0.8);
+    color: hsla(52, 82%, 70%, 0.8);
+    box-shadow: 0 0 10px hsla(52, 91%, 8%, 0.903);
+}
+
+/* NOVEDADES */                    /* ESTA SECCION LA PRESENTO PARA QUE QUEDE CON EL PROYECTO, PERO NO LA PRESENTE PARA SER EVALUADA */
+.ultimasNovedades {
+    display: inline-block;
+    width: 60%;
+    margin-left: 35px;
+    color: hsla(52, 91%, 8%, 0.903);
+}
+.botonNovedades {
+    color: hsla(52, 90%, 16%, 0.903);
+    background: transparent;
+    border: 2px solid hsla(52, 90%, 16%, 0.903);
+    border-radius: 6px;
+    padding: 6px 2px;
+    display: inline;
+    cursor: pointer;
+}
+.botonNovedades:hover {
+    background-color: hsla(52, 90%, 16%, 0.903);
+    color: hsla(52, 82%, 70%, 0.8);
+}
+.enlacesInteres {
+    float: right;
+    margin: 35px 35px 0 0;
+    text-align: center;
+    color: hsla(52, 91%, 8%, 0.903);
+}
+.enlacesInteres h3 {
+    margin-bottom: 15px;
+    border: groove 5px hsla(52, 82%, 70%, 0.8);
+    text-align: center;
+}
+.enlacesInteres a, .preguntasFrecuentes a {
+    text-decoration: none;
+    color: hsla(52, 91%, 8%, 0.903);
+}
+.preguntasFrecuentes ul {
+    list-style: none;
+}
+/* EN ESTA SECCION DE NOVEDADES ME PASO QUE SI MODIFICABA LOS MARGENES DE ALGO EN TOP Y BOTTOM (por ej, si a .ultimasNovedades le doy un margin-top para que no me quede tan junto al header, el footer se me superpone con el texto de la última de las preguntas del main,), SE ME SUPERPONIA AL FOOTER, ES POR ALGUNA ETIQUETA QUE PUSE MAL? ESTO PASA CON CUALQUIERA DE LAS CLASES QUE QUIERA SEPARAR UN POCO */
+
+/* NOSOTROS y SERVICIOS */
+.nosotros, .principalesServicios {
+    margin: 35px;
+    color: hsla(52, 91%, 8%, 0.903);
+    text-align: justify;
+}
+.nosotrosTitulo {
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nosotrosSection {
+    margin: 35px;
+}
+.nombresNosotros {
+    margin-bottom: 25px;
+}
+.nombresNosotros h3{
+    margin-bottom: 15px;
+}
+
+.tituloGaleria, .quienesSomos{
+    text-align: center;
+    font-size: 40px;
+}
+.galeriaNosotros{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+.galeriaNosotros a{
+    /* display: block; */
+    /* position: relative; */
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.galeriaNosotros img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: contain;
+    background-color: #fff;
+    transition: all 0.5s;
+}
+.galeriaNosotros img:hover{
+    transform: scale(1.10);
+}
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.lightbox img{
+    width: calc( 100vw - 60px );
+    max-height: 100vh;
+}
+.lightbox:target{
+    transform: scale(1);
+}
+.cerrar{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: hsla(52, 91%, 8%, 1);
+    color: hsla(52, 82%, 70%, 0.8);
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    font-weight: 900;
+}
+.siguiente{
+    display: block;
+    background-color: hsla(52, 91%, 8%, 1);
+    color: hsla(52, 82%, 70%, 0.8);
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    /* margin: 0 00px; */
+}
+
+.contenedorImagenes{
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "derechofamilia"
+                        " derechocivil"
+                        " derecholaboral"
+                        " mediacionprejudicial"
+                        " derechoconsumidor";
+}
+.familia{
+    grid-area: derechofamilia;
+}
+.civil{
+    grid-area: derechocivil;
+}
+.laboral{
+    grid-area: derecholaboral;
+}
+.prejudicial{
+    grid-area: mediacionprejudicial;
+}
+.consumidor{
+    grid-area: derechoconsumidor;
+}
+.contenedorImagenes .imagen{
+    position: relative;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0,0,0,.75);
+    margin: 15px;
+    border-radius: 10px;
+}
+.imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.descServicios{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(52, 90%, 16%, 0.8);
+    color: hsla(52, 82%, 70%);
+    font-size: 13px;
+    width: 100%;
+    height: 0;
+    transition: 1s ease;
+    overflow: hidden;
+}
+.descServicios h2{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    text-align: center;
+}
+.imagen:hover .descServicios{
+    height: 100%;
+}
+.descServicios p{
+    margin: 15px;
+    text-align: center;
+}
+
+/* CONTACTO */                    /* ESTA SECCION LA PRESENTO PARA QUE QUEDE CON EL PROYECTO, PERO NO LA PRESENTE PARA SER EVALUADA */
+.focus:focus {
+    background: hsla(51, 73%, 85%, 0.8);
+}
+form .boton {
+    color: hsla(52, 90%, 16%, 0.903);
+    background: transparent;
+    border: 2px solid hsla(52, 90%, 16%, 0.903);
+    border-radius: 6px;
+    padding: 6px 2px;
+    display: inline;
+    cursor: pointer;
+    margin: 20px;
+}
+form .boton:hover {
+    background-color: hsla(52, 90%, 16%, 0.903);
+    color: hsla(52, 82%, 70%, 0.8);
+}
+.contactanos, .viasContacto {
+    margin: 35px;
+    color: hsla(52, 91%, 8%, 0.903);
+}
+.viasContacto ul {
+    list-style: none;
+}
+.viasContacto li{
+    padding: 5px;
+}
+/* EN ESTA SECCION DE CONTACTO, SI QUERIA ENGLOBAR TODO (la secciones .contactanos y .viasContacto), EN UN MAIN SE ME ROMPIA LA ESTRUCTURA Y EL FOOTER SE DESCOLOCABA, COMO SE SOLUCIONA? */
+
+@media only screen and (min-width:500px){
+    /* SERVICIOS */
+    .contenedorImagenes{
+        grid-template-columns: repeat(2, 300px);
+        grid-template-rows: repeat(3, 300px);
+        justify-content: space-evenly;
+    }
+    .familia{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .civil{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .laboral{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .prejudicial{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .consumidor{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    .descServicios{
+        font-size: 15px;
+    }
+    /* FOOTER */
+    .horariosAtencion ul li{
+        font-size: 13px;
+    }
+    .contacto p{
+        font-size: 13px;
+    }
+    .seguinos{
+        margin-left: 10px;
+    }
+    .horariosAtencion{
+        margin-left: 15px;
+    }
+    .contacto{
+        margin-right: 15px;
+    }
+    footer i{
+        font-size: 20px;
+        margin-left: 10px;
+    }
+    .copyright{
+        font-size: 11px;
+    }
+    /*INDEX*/
+    .conocenos {
+        display: flex;
+    }
+    .conocenos h2{
+        margin: 0px;
+    }
+    .conocenos p{
+        margin: 0px;
+    }
+    .indexAdriana{
+        width: 300px;
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    header{
+        font-size: 25px;
+        height: 140px;
+    }
+    .logo img{
+        width: 130px;
+        height: 120px;
+        margin-left: 20px;
+    }
+    .nav{
+        margin-right: 20px;
+    }
+    footer {
+        height: 125px;
+        font-size: 16px;
+        grid-template-rows: 90px auto;
+    }
+    footer i {
+        font-size: 30px;
+        letter-spacing: 5px;
+    }
+    .horariosAtencion ul li, .contacto p {
+        font-size: 15px;
+    }
+    .copyright {
+        font-size: 11px;
+        margin-top: 20px;
+    }
+    .imagenesServiciosIndex{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    /*NOSOTROS*/
+    .galeriaNosotros{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas: "carlos adrianabiblioteca abogado trabajando trabajando"
+                            " adrianaescritorio  adrianaescritorio foroderecho trabajando trabajando"
+                            " adrianaescritorio adrianaescritorio foroderecho adrianaking adrianaking";
+    }
+    .adrianaBiblioteca{
+        grid-area: adrianabiblioteca;
+    }
+    .adrianaEscritorio{
+        grid-area: adrianaescritorio;
+    }
+    .abogado{
+        grid-area: abogado;
+    }
+    .adrianaKing{
+        grid-area: adrianaking;
+    }
+    .carlos{
+        grid-area: carlos;
+    }
+    .foroDerecho{
+        grid-area: foroderecho;
+    }
+    .trabajando{
+        grid-area: trabajando;
+    }
+    .lightbox img{
+        width: auto;
+        max-height: 70vh;
+    }
+    .cerrar{
+        top: 40px;
+        right: 40px;
+    }
+    .siguiente{
+        margin: 0 200px;
+    }
+
+    /* SERVICIOS */
+    .contenedorImagenes{
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 350px);
+        justify-content: space-evenly;
+    }
+    .familia{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .civil{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .laboral{
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .prejudicial{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .consumidor{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .descServicios{
+        font-size: 15px;
+    }
+}
