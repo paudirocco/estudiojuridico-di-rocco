@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <title>Estudio jurídico Guerrieri-Reale</title>
 </head>
@@ -28,13 +29,13 @@
         <section class="conocenos">
             <img src="imagenes/quienes somos.jpg" width="" height="" alt="foto ilustrativa de Adriana Reale en el estudio" class="indexAdriana">
             <article>
-                <h2>Conocenos</h2>
+                <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Conocenos</h2>
                 <p>Nuestro estudio fue fundado en 1965 por Carlos Alberto Guerrieri, egresado de la Universidad de Buenos Aires, y por Adriana Reale, abogada, egresada de la Universidad Católica de La Plata, especialista en Derecho de Familia.</p>
                 <a href="pages/nosotros.html"><input type="button" value="Ver más"></a>
             </article>
         </section>
         <section class="servicios">
-            <h2>Principales servicios</h2>
+            <h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Principales servicios</h2>
             <div class="imagenesServiciosIndex">
             <div>
                 <img src="imagenes/principales servicios.png" width="115" height="101" alt="ilustación derecho de familia">
@@ -81,5 +82,10 @@
         </div>
     </footer>
     <a href="#" class="subir"><i class="fa-solid fa-angle-up"></i></a>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

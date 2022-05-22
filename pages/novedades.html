@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../estilos.css">
     <title>Novedades</title>
 </head>
@@ -26,7 +27,8 @@
     </div>
     <main>
         <section class="ultimasNovedades">
-            <h2>Últimas novedades</h2>
+            <h2 data-aos="fade-down" data-aos-easing="linear"
+            data-aos-duration="1000">Últimas novedades</h2>
             <!--QUISE HACER UN BUSCADOR QUE APAREZCA ANTES DE LAS PRINCIPALES NOVEDADES, PERO NO SE SI ESTARÁ CORRECTO PORQUE LO GOOGLÉ-->
             <form method="get" action="https://www.google.com/search" target="_blank">
                 <input type="search" name="q" placeholder="Buscar noticia">
@@ -36,7 +38,7 @@
             <p>En autos “BECALLI ROSANA ELSA C/ BANCO COMAFI SA Y OTRO S/ACCIDENTE”, la Sala VI de la Cámara Nacional de Apelaciones del Trabajo resolvió hacer lugar al reclamo de la prestación dineraria de la Ley 24557. La actora relató que su tarea era "por demás estresante, con una exigencia desmedida, malos tratos, demasiada presión en busca de mejores resultados económicos para la demandada". Por tal motivo solicitó una reparación económica, la cual fue otorgada debido a que "el empleador no adoptó medidas para prevenir situaciones de ambiente hostil en el establecimiento donde trabajó la actora, ni tampoco realizó  exámenes médicos periódicos, responsabilidad que también le compete a la aseguradora".</p></article>
             <article><h3>Phishing: condenaron al Banco Provincia a pagar $600.000 a un cliente que sufrió una estafa</h3>
             <p>Además, la jueza condenó a la entidad bancaria a la devolución del monto de adelanto de haberes de $22.500 que fuera tomado por un grupo de personas que utilizaron la técnica de phishing para estafar a un jubilado de 68 años pidiendo un crédito de $650.000 en su nombre y cobrando un adelanto de su jubilación. El argumento es que "se pudo establecer una correspondencia entre las personas titulares de las cuentas de destino y las operaciones realizadas y registradas en el log de transacciones".</p></article>
-            <div class="preguntasFrecuentes"><h2>Preguntas frecuentes</h2>
+            <div class="preguntasFrecuentes"><h2 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">Preguntas frecuentes</h2>
             <ul>
                 <li><h3>¿Qué se necesita para iniciar un trámite de divorcio?</h3>
                 <p>Se necesita: partida de nacimiento, acta, libreta de matrimonio, DNI y en caso de existir bienes, la documentación que lo acredite.</p></li>
@@ -86,5 +88,10 @@
         <div class="copyright"><p>Todos los derechos reservados, 2022. Diseñado por Paula Di Rocco.</p>
         </div>
     </footer>
+        
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
