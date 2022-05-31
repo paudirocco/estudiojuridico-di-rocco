@@ -14,15 +14,15 @@ html {
 .contenedorGrid {
     display: grid;
     grid-template-areas: "header"
-                        " frase"
+                        " jumbotron"
                         " main"
                         " footer";
 }
 .header{
     grid-area: header;
 }
-.frase{
-    grid-area: frase;
+.jumbotron{
+    grid-area: jumbotron;
 }
 .main{
     grid-area: main;
@@ -33,47 +33,20 @@ html {
 
 /* HEADER */
 header {
-    height: 100px;
-    width: 100%;
     background-color: hsla(52, 89%, 24%, 0.903);
-    font-size: 15px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;         /* en realidad me gustaria cuando la resolucion es baja hacer un menu hamburguesa, pero por el momento lo dejo asi */
-    justify-content: space-between;
-    align-items: center;
+    font-size: 25px;
 }
-.logo img{
-    width: 100px;
-    height: 90px;
-}
-.nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-right: 10px;
-    color: hsla(52, 91%, 8%, 0.903);
-}
-.nav a {
-    text-decoration: none;
-    color: hsla(52, 82%, 70%, 0.8);
-}
-.nav a:hover {
-    color:hsla(52, 91%, 8%, 0.903)
-}
-.frase{
-    display: flex;
-}
-.frase1 {
-    height: 100px;
-    width: 100%;
+
+.jumbotron{
     background-image: url(imagenes/fondo1.jpg);
     background-size: cover;
-}
-.frase p {
+    background-position: center;
+    max-height: 200px;
+    width: 100%;
     color: hsla(52, 90%, 16%, 0.903);
-    background-color: hsla(52, 58%, 85%, 0.792);
-    padding-left: 15px;
-    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px hsla(52, 58%, 85%, 0.792);
 }
 
 /* INDEX */
@@ -81,24 +54,54 @@ main {
     width: auto;
     height: 100%;
 }
-.conocenos {
-    margin: 30px;
-}
-.conocenos h2 {
+.tituloConocenosBs{
+    text-align: center;
+    background-color: hsla(52, 82%, 70%, 0.8);
     color: hsla(52, 91%, 8%, 0.903);
-    margin: 15px;
+    padding: 10px;
 }
-.indexAdriana{
-    width: auto;
-    height: 300px;
-    margin-right: 15px;
+.conocenosBs{
+    width: 100%;
+    background-color: hsla(52, 91%, 8%, 0.903);
+    margin-bottom: 20px;
 }
-.conocenos p {
-    color: hsla(52, 91%, 8%, 0.903);
+.rowConocenos{
+    min-height: 500px;
+}
+.cleft{
+    background-image: url(imagenes/quienes\ somos.jpg);
+    min-height: 300px;
+    background-size: auto;
+    background-position: 30% 30%;
+}
+.cright{
+    background-color: #fff;
+    padding: 15px;
+}
+.cright h3{
+    text-align: center;
+}
+.cright p{
     text-align: justify;
-    margin: 15px;
+    padding: 10px 50px 0px 50px;
 }
-.conocenos input, .botonServicios {
+.conocenosBs input{
+    color: hsla(52, 90%, 16%, 0.903);
+    background: transparent;
+    border: 2px solid hsla(52, 90%, 16%, 0.903);
+    border-radius: 6px;
+    padding: 6px 2px;
+    cursor: pointer;
+    margin: 10px 0px 0px 50px;
+}
+.conocenosBs input:hover{
+    background-color: hsla(52, 90%, 16%, 0.903);
+    color: hsla(52, 82%, 70%, 0.8);
+}
+.conocenosBs a{
+    text-decoration: none;
+}
+.botonServicios {
     color: hsla(52, 90%, 16%, 0.903);
     background: transparent;
     border: 2px solid hsla(52, 90%, 16%, 0.903);
@@ -106,47 +109,23 @@ main {
     padding: 6px 2px;
     display: inline;
     cursor: pointer;
-    margin: 20px;
 }
-.conocenos input:hover, .botonServicios:hover {
+.botonServicios:hover {
     background-color: hsla(52, 90%, 16%, 0.903);
     color: hsla(52, 82%, 70%, 0.8);
 }
-.conocenos a {
-    text-decoration: none;
-}
 .servicios {
-    margin: 30px;
-    /* width: auto; */
-}
-.servicios h2{
-    text-align: left;
+    margin: 30px 0px 30px 10px;
 }
 .imagenesServiciosIndex{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center; */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    justify-content: center;
     text-align: center;
-    margin-right: 15px;
-}
-.servicios div {
-    padding-left: 50px;
-    align-items: center;
-}
-.servicios h2 {
-    width: auto;
 }
 .linkServicios {
     text-decoration: none;
 }
 .seccionBoton {
     text-align: center;
+    margin-bottom: 35px;
 }
 
 /* FOOTER */
@@ -154,47 +133,21 @@ footer {
     width: 100%;
     background-color: hsla(52, 89%, 24%, 0.903);
     color:hsla(52, 82%, 70%, 0.8);
-    font-size: 15px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 90px auto;
-}
-.seguinos {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    font-size: 10px;
 }
 footer h3 {
-    margin: 6px;
+    margin-top: 6px;
+    font-size: 20px;
 }
 footer i {
     color: hsla(52, 82%, 70%, 0.8);
     font-size: 16px;
     letter-spacing: 5px;
-    margin-left: 6px;
 }
-.horariosAtencion {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-.horariosAtencion ul li{
-    font-size: 9px;
-}
-.horariosAtencion ul{
-    list-style: none;
-    margin-left: 6px;
-}
-.contacto {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    text-align: right;
-}
-.contacto p {
-    font-size: 9px;
-    margin-right: 6px;
+.horariosAtencion p{
+    margin-bottom: 0;
 }
 .copyright {
-    grid-column: 1/4;
-    grid-row: 2/3;
     text-align: center;
     font-size: 7px;
     margin-top: 10px;
@@ -204,7 +157,7 @@ footer i {
     width: 40px;
     background-color: hsla(52, 91%, 8%, 0.903);
     position: fixed;
-    bottom: 40px;
+    bottom: 19px;
     right: 15px;
     text-align: center;
     line-height: 30px;
@@ -253,13 +206,21 @@ footer i {
 .preguntasFrecuentes ul {
     list-style: none;
 }
-/* EN ESTA SECCION DE NOVEDADES ME PASO QUE SI MODIFICABA LOS MARGENES DE ALGO EN TOP Y BOTTOM (por ej, si a .ultimasNovedades le doy un margin-top para que no me quede tan junto al header, el footer se me superpone con el texto de la última de las preguntas del main,), SE ME SUPERPONIA AL FOOTER, ES POR ALGUNA ETIQUETA QUE PUSE MAL? ESTO PASA CON CUALQUIERA DE LAS CLASES QUE QUIERA SEPARAR UN POCO */
 
-/* NOSOTROS y SERVICIOS */
+/* NOSOTROS y SERVICIOS */                /* LA SECCION "SERVICIOS" LA PRESENTO PARA QUE QUEDE CON EL PROYECTO, PERO NO LA PRESENTE PARA SER EVALUADA */
+.sec{
+    width: 100vw;
+    margin-bottom: 50px;
+}
+.carrusel{
+    background-color:hsla(52, 82%, 70%, 0.562);
+}
 .nosotros, .principalesServicios {
-    margin: 35px;
     color: hsla(52, 91%, 8%, 0.903);
     text-align: justify;
+}
+.nosotros{
+    width: 100vw;
 }
 .nosotrosTitulo {
     margin-left: 40px;
@@ -267,7 +228,7 @@ footer i {
     margin-bottom: 20px;
 }
 .nosotrosSection {
-    margin: 35px;
+    margin: 35px 50px 70px 50px;
 }
 .nombresNosotros {
     margin-bottom: 25px;
@@ -275,83 +236,12 @@ footer i {
 .nombresNosotros h3{
     margin-bottom: 15px;
 }
-
 .tituloGaleria, .quienesSomos{
     text-align: center;
     font-size: 40px;
-}
-.galeriaNosotros{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    width: 95%;
-    margin: auto;
-    grid-gap: 10px;
-    padding: 40px 0;
-    overflow: hidden;
-}
-.galeriaNosotros a{
-    /* display: block; */
-    /* position: relative; */
-    overflow: hidden;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-}
-.galeriaNosotros img{
-    width: 100%;
-    vertical-align: top;
-    height: 300px;
-    object-fit: contain;
-    background-color: #fff;
-    transition: all 0.5s;
-}
-.galeriaNosotros img:hover{
-    transform: scale(1.10);
-}
-.lightbox{
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color:rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out;
-    width: 100%;
-    height: 100vh;
-    z-index: 100;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-}
-.lightbox img{
-    width: calc( 100vw - 60px );
-    max-height: 100vh;
-}
-.lightbox:target{
-    transform: scale(1);
-}
-.cerrar{
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background-color: hsla(52, 91%, 8%, 1);
-    color: hsla(52, 82%, 70%, 0.8);
-    text-decoration: none;
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    border-radius: 50%;
-    font-weight: 900;
-}
-.siguiente{
-    display: block;
-    background-color: hsla(52, 91%, 8%, 1);
-    color: hsla(52, 82%, 70%, 0.8);
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
-    text-decoration: none;
-    text-align: center;
-    /* margin: 0 00px; */
+    background-color: hsla(52, 82%, 70%, 0.8);
+    color: hsla(52, 91%, 8%, 0.903);
+    padding: 10px;
 }
 
 .contenedorImagenes{
@@ -418,9 +308,9 @@ footer i {
     text-align: center;
 }
 
-/* CONTACTO */                    /* ESTA SECCION LA PRESENTO PARA QUE QUEDE CON EL PROYECTO, PERO NO LA PRESENTE PARA SER EVALUADA */
+/* CONTACTO */
 .focus:focus {
-    background: hsla(51, 73%, 85%, 0.8);
+    background: hsla(50, 14%, 91%, 0.919);
 }
 form .boton {
     color: hsla(52, 90%, 16%, 0.903);
@@ -440,13 +330,19 @@ form .boton:hover {
     margin: 35px;
     color: hsla(52, 91%, 8%, 0.903);
 }
+.tituloContactanos{
+    text-align: center;
+    font-size: 40px;
+    background-color: hsla(52, 82%, 70%, 0.8);
+    color: hsla(52, 91%, 8%, 0.903);
+    padding: 10px;
+}
 .viasContacto ul {
     list-style: none;
 }
 .viasContacto li{
     padding: 5px;
 }
-/* EN ESTA SECCION DE CONTACTO, SI QUERIA ENGLOBAR TODO (la secciones .contactanos y .viasContacto), EN UN MAIN SE ME ROMPIA LA ESTRUCTURA Y EL FOOTER SE DESCOLOCABA, COMO SE SOLUCIONA? */
 
 @media only screen and (min-width:500px){
     /* SERVICIOS */
@@ -485,55 +381,20 @@ form .boton:hover {
     .contacto p{
         font-size: 13px;
     }
-    .seguinos{
-        margin-left: 10px;
-    }
-    .horariosAtencion{
-        margin-left: 15px;
-    }
-    .contacto{
-        margin-right: 15px;
-    }
     footer i{
         font-size: 20px;
-        margin-left: 10px;
     }
     .copyright{
         font-size: 11px;
     }
-    /*INDEX*/
-    .conocenos {
-        display: flex;
-    }
-    .conocenos h2{
-        margin: 0px;
-    }
-    .conocenos p{
-        margin: 0px;
-    }
-    .indexAdriana{
-        width: 300px;
-        height: 350px;
-    }
 }
 
 @media only screen and (min-width:1024px){
-    header{
-        font-size: 25px;
-        height: 140px;
-    }
-    .logo img{
-        width: 130px;
-        height: 120px;
-        margin-left: 20px;
-    }
-    .nav{
-        margin-right: 20px;
+    .jumbotron{
+        font-size: 20px;
     }
     footer {
-        height: 125px;
         font-size: 16px;
-        grid-template-rows: 90px auto;
     }
     footer i {
         font-size: 30px;
@@ -544,53 +405,6 @@ form .boton:hover {
     }
     .copyright {
         font-size: 11px;
-        margin-top: 20px;
-    }
-    .imagenesServiciosIndex{
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr;
-    }
-
-    /*NOSOTROS*/
-    .galeriaNosotros{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, auto);
-        grid-template-areas: "carlos adrianabiblioteca abogado trabajando trabajando"
-                            " adrianaescritorio  adrianaescritorio foroderecho trabajando trabajando"
-                            " adrianaescritorio adrianaescritorio foroderecho adrianaking adrianaking";
-    }
-    .adrianaBiblioteca{
-        grid-area: adrianabiblioteca;
-    }
-    .adrianaEscritorio{
-        grid-area: adrianaescritorio;
-    }
-    .abogado{
-        grid-area: abogado;
-    }
-    .adrianaKing{
-        grid-area: adrianaking;
-    }
-    .carlos{
-        grid-area: carlos;
-    }
-    .foroDerecho{
-        grid-area: foroderecho;
-    }
-    .trabajando{
-        grid-area: trabajando;
-    }
-    .lightbox img{
-        width: auto;
-        max-height: 70vh;
-    }
-    .cerrar{
-        top: 40px;
-        right: 40px;
-    }
-    .siguiente{
-        margin: 0 200px;
     }
 
     /* SERVICIOS */
