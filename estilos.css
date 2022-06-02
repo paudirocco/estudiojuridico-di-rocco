@@ -59,6 +59,7 @@ main {
     background-color: hsla(52, 82%, 70%, 0.8);
     color: hsla(52, 91%, 8%, 0.903);
     padding: 10px;
+    background-image: linear-gradient(to top right, hsla(52, 91%, 8%, 0.903), hsla(52, 82%, 70%, 0.8), rgb(240, 240, 90));
 }
 .conocenosBs{
     width: 100%;
@@ -119,6 +120,13 @@ main {
 }
 .imagenesServiciosIndex{
     text-align: center;
+}
+.imagenesServiciosIndex img{
+    transition: all 0.5s;
+    margin-bottom: 10px;
+}
+.imagenesServiciosIndex img:hover{
+    transform: scale(1.20);
 }
 .linkServicios {
     text-decoration: none;
@@ -322,6 +330,9 @@ form .boton {
     cursor: pointer;
     margin: 20px;
 }
+.form-control, .form-select{
+    width: auto;
+}
 form .boton:hover {
     background-color: hsla(52, 90%, 16%, 0.903);
     color: hsla(52, 82%, 70%, 0.8);
@@ -331,11 +342,8 @@ form .boton:hover {
     color: hsla(52, 91%, 8%, 0.903);
 }
 .tituloContactanos{
-    text-align: center;
     font-size: 40px;
-    background-color: hsla(52, 82%, 70%, 0.8);
-    color: hsla(52, 91%, 8%, 0.903);
-    padding: 10px;
+
 }
 .viasContacto ul {
     list-style: none;
