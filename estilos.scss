@@ -41,6 +41,14 @@ header {
     font-size: 25px;
 }
 
+.navColor{
+    color: $colorClaro !important;
+}
+
+.navColor:hover{
+    color: $colorOscuro !important;
+}
+
 .jumbotron{
     background-image: url(imagenes/fondo1.jpg);
     background-size: cover;
@@ -54,9 +62,15 @@ header {
 }
 
 /* INDEX */
+@mixin sizes($width, $height) {
+    height: $height;
+    width: $width;
+}
+
 main {
-    width: auto;
-    height: 100%;
+    @include sizes(auto, 100%);
+    // width: auto;
+    // height: 100%;
 }
 
 .tituloConocenosBs{
@@ -181,8 +195,9 @@ footer {
 }
 
 .subir {
-    height: 40px;
-    width: 40px;
+    // height: 40px;
+    // width: 40px;
+    @include sizes(40px, 40px);
     background-color: $colorOscuro;
     position: fixed;
     bottom: 19px;
@@ -259,6 +274,28 @@ footer {
     color: $colorOscuro;
     text-align: justify;
 }
+
+$mapa: (
+    100px: brown,
+    500px: khaki
+);
+
+@each $margin, $color in $mapa {
+    .color-#{$color} {
+        margin-left: $margin;
+        border: 7px inset $color;
+        height: 300px - $margin;
+        padding: 10px;
+    }
+}
+
+$estilos: (
+    margen: 250px,
+    arriba: 50px,
+    centro: center,
+    magnitud: 20px,
+);
+
 .nosotros{
     width: 100vw;
 
@@ -270,6 +307,15 @@ footer {
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+        .historia{
+            margin-left: map-get($map: $estilos, $key: margen);
+            margin-top: map-get($map: $estilos, $key: arriba);
+            margin-right: map-get($map: $estilos, $key: margen);
+            text-align: map-get($map: $estilos, $key:centro);
+            font-size: map-get($map: $estilos, $key: magnitud);
+        }
+
     
         .nombresNosotros {
             margin-bottom: 25px;
@@ -279,13 +325,6 @@ footer {
             }
         }
     }
-}
-.tituloGaleria, .quienesSomos{
-    text-align: center;
-    font-size: 40px;
-    background-color: $colorClaro;
-    color: $colorOscuro;
-    padding: 10px;
 }
 
 .contenedorImagenes{
@@ -322,8 +361,9 @@ footer {
         border-radius: 10px;
     
         img{
-            width: 100%;
-            height: 100%;
+            @include sizes(100%, 100%);
+            // width: 100%;
+            // height: 100%;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -335,8 +375,9 @@ footer {
             background-color: hsla(52, 90%, 16%, 0.8);
             color: hsla(52, 82%, 70%);
             font-size: 13px;
-            width: 100%;
-            height: 0;
+            @include sizes(100%, 0);
+            // width: 100%;
+            // height: 0;
             transition: 1s ease;
             overflow: hidden;
 
@@ -357,7 +398,6 @@ footer {
 .imagen:hover .descServicios{
     height: 100%;
 }
-
 
 /* CONTACTO */
 .contactanos {
@@ -386,7 +426,7 @@ footer {
     }
 }
 
-/* EN .VIASCONTACTO NO SE COMO HACER PARA QUE EL EXTEND SOLO APLIQUE A PROPIEDADES DEL .CONTACTANOS Y NO AL RESTO DE LAS CLASES DENTRO DEL .CONTACTANOS (ESTARIA BIEN APLICAR EL EXTEND O SERIA MEJOR COPIAR Y PEGAR ESAS PROPIEDADES QUE QUIERO Y LISTO?)  */
+/* EN .VIASCONTACTO NO SE COMO HACER PARA QUE EL EXTEND SOLO APLIQUE A PROPIEDADES DEL .CONTACTANOS (padre) Y NO AL RESTO DE LAS CLASES DENTRO (los hijos) DEL .CONTACTANOS (ESTARIA BIEN APLICAR EL EXTEND O SERIA MEJOR COPIAR Y PEGAR ESAS PROPIEDADES QUE QUIERO Y LISTO?)  */
 .viasContacto {
     @extend .contactanos;
 
@@ -400,6 +440,21 @@ footer {
 }
 .tituloContactanos{
     font-size: 40px;
+}
+.whatsappIcon{
+    @include sizes(55px, 55px);
+    background-color: rgb(14, 192, 14);
+    position: fixed;
+    bottom: 19px;
+    right: 15px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 40px;
+    border-radius: 50%;
+    // border: 5px solid $colorClaro;
+    color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px $colorOscuro;
+    cursor: pointer;
 }
 
 
