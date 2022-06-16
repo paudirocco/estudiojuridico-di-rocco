@@ -69,8 +69,6 @@ header {
 
 main {
     @include sizes(auto, 100%);
-    // width: auto;
-    // height: 100%;
 }
 
 .tituloConocenosBs{
@@ -90,7 +88,7 @@ main {
         min-height: 500px;
 
         .cleft{
-            background-image: url(imagenes/quienes\ somos.jpg);
+            background-image: url(imagenes/quienesSomos.jpg);
             min-height: 300px;
             background-size: auto;
             background-position: 30% 30%;
@@ -182,6 +180,15 @@ footer {
         font-size: 16px;
         letter-spacing: 5px;
     }
+    .facebook{
+        color: rgb(58, 58, 250);
+    }
+    .instagram{
+        color: rgb(249, 71, 101);
+    }
+    .twitter{
+        color: rgb(136, 201, 239);
+    }
 
     .horariosAtencion p{
         margin-bottom: 0;
@@ -195,8 +202,6 @@ footer {
 }
 
 .subir {
-    // height: 40px;
-    // width: 40px;
     @include sizes(40px, 40px);
     background-color: $colorOscuro;
     position: fixed;
@@ -214,25 +219,33 @@ footer {
 /* NOVEDADES */
 .ultimasNovedades {
     display: inline-block;
-    width: 60%;
-    margin-left: 35px;
+    margin: 35px 50px 35px 50px;
     color: $colorOscuro;
 
-    .botonNovedades {
-        color: $colorMedio;
-        background: transparent;
-        border: 2px solid $colorMedio;
-        border-radius: 6px;
-        padding: 6px 2px;
-        display: inline;
-        cursor: pointer;
+    form{
+        margin: 20px 0px;
     }
-    .botonNovedades:hover {
-        background-color: $colorMedio;
-        color: $colorClaro;
+        .botonNovedades {
+            color: $colorMedio;
+            background: transparent;
+            border: 2px solid $colorMedio;
+            border-radius: 6px;
+            padding: 6px 2px;
+            display: inline;
+            cursor: pointer;
+        }
+        .botonNovedades:hover {
+            background-color: $colorMedio;
+            color: $colorClaro;
+        }
+
+    article{
+        margin: 50px 0px;
     }
+
     .preguntasFrecuentes ul {
         list-style: none;
+        margin-top: 35px;
 
         a{
             text-decoration: none;
@@ -241,8 +254,7 @@ footer {
     }
 }
 .enlacesInteres {
-    float: right;
-    margin: 35px 35px 0 0;
+    margin: 20px 35px 35px 35px;
     text-align: center;
     color: $colorOscuro;
 
@@ -254,13 +266,9 @@ footer {
     a {
         text-decoration: none;
         color: $colorOscuro;
+        display: block;
     }
 }
-// .enlacesInteres a, .preguntasFrecuentes a {
-//     text-decoration: none;
-//     color: $colorOscuro;
-// }
-
 
 /* NOSOTROS y SERVICIOS */
 .sec{
@@ -276,21 +284,20 @@ footer {
 }
 
 $mapa: (
-    100px: brown,
-    500px: khaki
+    10px: brown,
+    50px: khaki
 );
 
 @each $margin, $color in $mapa {
-    .color-#{$color} {
-        margin-left: $margin;
+    .color-#{""+$color} {
         border: 7px inset $color;
-        height: 300px - $margin;
+        min-height: 300px - $margin;
         padding: 10px;
     }
 }
 
 $estilos: (
-    margen: 250px,
+    margen: 10px,
     arriba: 50px,
     centro: center,
     magnitud: 20px,
@@ -304,7 +311,7 @@ $estilos: (
 
         .nosotrosTitulo {
             margin-left: 40px;
-            margin-top: 20px;
+            margin-top: 50px;
             margin-bottom: 20px;
         }
 
@@ -316,7 +323,6 @@ $estilos: (
             font-size: map-get($map: $estilos, $key: magnitud);
         }
 
-    
         .nombresNosotros {
             margin-bottom: 25px;
         
@@ -362,8 +368,6 @@ $estilos: (
     
         img{
             @include sizes(100%, 100%);
-            // width: 100%;
-            // height: 100%;
             object-fit: cover;
             border-radius: 10px;
         }
@@ -376,8 +380,6 @@ $estilos: (
             color: hsla(52, 82%, 70%);
             font-size: 13px;
             @include sizes(100%, 0);
-            // width: 100%;
-            // height: 0;
             transition: 1s ease;
             overflow: hidden;
 
@@ -436,6 +438,11 @@ $estilos: (
         li{
             padding: 5px;
         }
+        iframe{
+            margin-top: 25px;
+            width: auto;
+            height: 300px;
+        }
     }
 }
 .tituloContactanos{
@@ -451,17 +458,15 @@ $estilos: (
     line-height: 55px;
     font-size: 40px;
     border-radius: 50%;
-    // border: 5px solid $colorClaro;
     color: rgb(255, 255, 255);
     box-shadow: 0 0 10px $colorOscuro;
     cursor: pointer;
 }
 
-
 @media only screen and (min-width:500px){
     /* SERVICIOS */
     .contenedorImagenes{
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(3, 300px);
         justify-content: space-evenly;
 
@@ -501,6 +506,22 @@ $estilos: (
     }
     .copyright{
         font-size: 11px;
+    }
+}
+
+@media only screen and (min-width:768px){
+    /*NOSOTROS*/
+    $mapa: (
+    100px: brown,
+    500px: khaki
+    );
+    @each $margin, $color in $mapa {
+        .color-#{""+$color} {
+            margin-left: calc($margin / 2);
+            border: 7px inset $color;
+            min-height: 300px - $margin;
+            padding: 10px;
+        }
     }
 }
 
@@ -553,5 +574,32 @@ $estilos: (
         .descServicios{
             font-size: 15px;
         }
+    }
+
+    /*NOSOTROS*/
+    $estilos: (
+        margen: 250px,
+        arriba: 50px,
+        centro: center,
+        magnitud: 20px,
+    );
+
+    .historia{
+        margin-left: map-get($map: $estilos, $key: margen);
+        margin-top: map-get($map: $estilos, $key: arriba);
+        margin-right: map-get($map: $estilos, $key: margen);
+        text-align: map-get($map: $estilos, $key:centro);
+        font-size: map-get($map: $estilos, $key: magnitud);
+    }
+
+    /* NOVEDADES */
+    .ultimasNovedades {
+        display: inline-block;
+        width: 60%;
+        margin-left: 33px;
+    }
+    .enlacesInteres {
+        margin: 35px 35px 0 0;
+        float: right;
     }
 }
