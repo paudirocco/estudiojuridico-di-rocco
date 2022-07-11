@@ -50,7 +50,6 @@ header {
   background-size: cover;
   background-position: center;
   max-height: 200px;
-  width: 100%;
   color: hsla(52deg, 90%, 16%, 0.903);
   font-size: 15px;
   font-weight: bold;
@@ -104,7 +103,7 @@ main {
   background: transparent;
   border: 2px solid hsla(52deg, 90%, 16%, 0.903);
   border-radius: 6px;
-  padding: 6px 2px;
+  padding: 10px 12px;
   cursor: pointer;
   margin: 10px 0px 0px 50px;
 }
@@ -113,9 +112,6 @@ main {
   color: hsla(52deg, 82%, 70%, 0.8);
 }
 
-.servicios {
-  margin: 30px 0px 30px 10px;
-}
 .servicios .imagenesServiciosIndex {
   text-align: center;
 }
@@ -139,7 +135,7 @@ main {
   background: transparent;
   border: 2px solid hsla(52deg, 90%, 16%, 0.903);
   border-radius: 6px;
-  padding: 6px 2px;
+  padding: 10px 12px;
   display: inline;
   cursor: pointer;
 }
@@ -150,7 +146,7 @@ main {
 
 /* FOOTER */
 footer {
-  width: 100%;
+  width: 100vw;
   background-color: hsla(52deg, 89%, 24%, 0.903);
   color: hsla(52deg, 82%, 70%, 0.8);
   font-size: 10px;
@@ -212,7 +208,7 @@ footer .copyright {
   background: transparent;
   border: 2px solid hsla(52deg, 90%, 16%, 0.903);
   border-radius: 6px;
-  padding: 6px 2px;
+  padding: 10px 12px;
   display: inline;
   cursor: pointer;
 }
@@ -250,7 +246,7 @@ footer .copyright {
 
 /* NOSOTROS y SERVICIOS */
 .sec {
-  width: 100vw;
+  width: 100%;
   margin-bottom: 50px;
 }
 
@@ -276,7 +272,7 @@ footer .copyright {
 }
 
 .nosotros {
-  width: 100vw;
+  width: 100%;
 }
 .nosotros .nosotrosSection {
   margin: 35px 50px 70px 50px;
@@ -362,39 +358,44 @@ footer .copyright {
 }
 
 /* CONTACTO */
-.contactanos, .viasContacto {
+.contactanos {
   margin: 35px;
   color: hsla(52deg, 91%, 8%, 0.903);
 }
-.contactanos .focus:focus, .viasContacto .focus:focus {
+.contactanos .focus:focus {
   background: hsla(50deg, 14%, 91%, 0.919);
 }
-.contactanos form .boton, .viasContacto form .boton {
+.contactanos form .boton {
   color: hsla(52deg, 90%, 16%, 0.903);
   background: transparent;
   border: 2px solid hsla(52deg, 90%, 16%, 0.903);
   border-radius: 6px;
-  padding: 6px 2px;
+  padding: 10px 12px;
   display: inline;
   cursor: pointer;
   margin: 20px;
 }
-.contactanos .form-control, .viasContacto .form-control, .contactanos .form-select, .viasContacto .form-select {
-  width: auto;
+.contactanos .form-control, .contactanos .form-select {
+  width: 80%;
 }
-.contactanos form .boton:hover, .viasContacto form .boton:hover {
+.contactanos form .boton:hover {
   background-color: hsla(52deg, 90%, 16%, 0.903);
   color: hsla(52deg, 82%, 70%, 0.8);
 }
 
-/* EN .VIASCONTACTO NO SE COMO HACER PARA QUE EL EXTEND SOLO APLIQUE A PROPIEDADES DEL .CONTACTANOS (padre) Y NO AL RESTO DE LAS CLASES DENTRO (los hijos) DEL .CONTACTANOS (ESTARIA BIEN APLICAR EL EXTEND O SERIA MEJOR COPIAR Y PEGAR ESAS PROPIEDADES QUE QUIERO Y LISTO?)  */
+.viasContacto {
+  margin: 35px;
+  color: hsla(52deg, 91%, 8%, 0.903);
+}
 .viasContacto ul {
   list-style: none;
+  margin-left: 30px;
+  margin-top: 20px;
 }
 .viasContacto ul li {
   padding: 5px;
 }
-.viasContacto ul iframe {
+.viasContacto iframe {
   margin-top: 25px;
   width: auto;
   height: 300px;

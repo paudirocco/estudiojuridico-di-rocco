@@ -54,7 +54,6 @@ header {
     background-size: cover;
     background-position: center;
     max-height: 200px;
-    width: 100%;
     color: $colorMedio;
     font-size: 15px;
     font-weight: bold;
@@ -112,7 +111,7 @@ main {
                     background: transparent;
                     border: 2px solid $colorMedio;
                     border-radius: 6px;
-                    padding: 6px 2px;
+                    padding: 10px 12px;
                     cursor: pointer;
                     margin: 10px 0px 0px 50px;
                 }
@@ -126,7 +125,7 @@ main {
 }
 
 .servicios {
-    margin: 30px 0px 30px 10px;
+    // margin: 30px 0px 30px 10px;
 
     .imagenesServiciosIndex{
         text-align: center;
@@ -153,7 +152,7 @@ main {
             background: transparent;
             border: 2px solid $colorMedio;
             border-radius: 6px;
-            padding: 6px 2px;
+            padding: 10px 12px;
             display: inline;
             cursor: pointer;
             }
@@ -166,7 +165,7 @@ main {
 
 /* FOOTER */
 footer {
-    width: 100%;
+    width: 100vw;
     background-color: hsla(52, 89%, 24%, 0.903);
     color:$colorClaro;
     font-size: 10px;
@@ -230,7 +229,7 @@ footer {
             background: transparent;
             border: 2px solid $colorMedio;
             border-radius: 6px;
-            padding: 6px 2px;
+            padding: 10px 12px;
             display: inline;
             cursor: pointer;
         }
@@ -272,7 +271,7 @@ footer {
 
 /* NOSOTROS y SERVICIOS */
 .sec{
-    width: 100vw;
+    width: 100%;
     margin-bottom: 50px;
 }
 .carrusel{
@@ -304,7 +303,7 @@ $estilos: (
 );
 
 .nosotros{
-    width: 100vw;
+    width: 100%;
 
     .nosotrosSection {
         margin: 35px 50px 70px 50px;
@@ -414,13 +413,13 @@ $estilos: (
         background: transparent;
         border: 2px solid $colorMedio;
         border-radius: 6px;
-        padding: 6px 2px;
+        padding: 10px 12px;
         display: inline;
         cursor: pointer;
         margin: 20px;
     }
     .form-control, .form-select{
-        width: auto;
+        width: 80%;
     }
     form .boton:hover {
         background-color: $colorMedio;
@@ -428,21 +427,23 @@ $estilos: (
     }
 }
 
-/* EN .VIASCONTACTO NO SE COMO HACER PARA QUE EL EXTEND SOLO APLIQUE A PROPIEDADES DEL .CONTACTANOS (padre) Y NO AL RESTO DE LAS CLASES DENTRO (los hijos) DEL .CONTACTANOS (ESTARIA BIEN APLICAR EL EXTEND O SERIA MEJOR COPIAR Y PEGAR ESAS PROPIEDADES QUE QUIERO Y LISTO?)  */
 .viasContacto {
-    @extend .contactanos;
+    margin: 35px;
+    color: $colorOscuro;
 
     ul {
         list-style: none;
+        margin-left: 30px;
+        margin-top: 20px;
 
         li{
             padding: 5px;
         }
-        iframe{
+    }
+    iframe{
             margin-top: 25px;
             width: auto;
             height: 300px;
-        }
     }
 }
 .tituloContactanos{
