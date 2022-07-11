@@ -112,6 +112,9 @@ main {
   color: hsla(52deg, 82%, 70%, 0.8);
 }
 
+.servicios {
+  margin: 30px 0px 30px 10px;
+}
 .servicios .imagenesServiciosIndex {
   text-align: center;
 }
